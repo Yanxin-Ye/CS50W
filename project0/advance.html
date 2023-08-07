@@ -10,7 +10,7 @@
             #container > div {
                 font-size: 20px;
                 margin: 2px;
-                padding-bottom: 256px;
+                padding-bottom: 128px;
                 width: 2056px;
                 text-align: center;
             }
@@ -20,20 +20,25 @@
                 grid-column-gap: 20px;
                 grid-row-gap: 10px;
                 grid-template-columns: auto auto;
+
             }
            .grid-item {
                 background-color: white;
                 font-size: 20px;
                 padding: 2px;
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 5px 50px 5px 100px;
             }
-            #search-button {
+            #advance-search-button {
                 border-radius: 6px;
                 border: none;
                 font-size: 16px;
                 margin: 4px 2px;
                 padding: 5px;
+                background-color: #4285F4;
+                color: white;
             }
-
         </style>
     </head>
     <body>
@@ -46,11 +51,22 @@
                 </div>
             </div>
             <div style="text-align: center">
-                <form action="https://google.com/search">
-                    <input type="text" name="q">
-                    <div style="padding: 4px"> </div>
-                    <input type="submit" value="Google Search" id="search-button">
+                <form action="https://google.com/search" id="searchbar">
+                 <div class="grid">
+                    <div class="grid-item">Find pages with...</div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"> all these words:</div>
+                     <div class="grid-item"> <input type="text" name="q"></div>
+                     <div class="grid-item"> this exact word or phrase:</div>
+                     <div class="grid-item"> <input type="text" name="q"></div>
+                     <div class="grid-item"> any of these words:</div>
+                     <div class="grid-item"> <input type="text" name="q"></div>
+                     <div class="grid-item"> none of these words:</div>
+                     <div class="grid-item"> <input type="text" name="q"></div>
+                 </div>
+                    <input type="submit" value="Google Search" id="advance-search-button">
                 </form>
+            <ad>
             </div>
         </div>
     </body>
